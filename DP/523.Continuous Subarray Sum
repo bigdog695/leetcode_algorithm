@@ -1,1 +1,21 @@
-
+#Author:UncleDoggy
+#Time:O(n)
+#Space:O(n)
+#Method:用一个prefix存储前若干项对k取余的和
+#Code:
+1.python version:
+    def f(nums,k):
+        prefix=[0]
+        for i in range(len(nums)):        #compute prefix
+            cur=prefix[-1]+nums[i]
+            if k!=0:cur%=k
+            prefix.append(cur)
+        check=set()
+        for i in range(len(nums)-3,-1,-1):
+            check.append(prefix(i+2))   #因为题目要求子数组至少为2，所以间隔设为2
+            if prefix(i) in check:  #如果prefix(i)与后面的某一个prefix(?)相同，则中间夹杂的和式必为k的整数倍
+                return True
+        return False
+        
+2.cpp version:
+(to be continued)
