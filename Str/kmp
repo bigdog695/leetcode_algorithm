@@ -1,1 +1,4 @@
-
+kmp算法的核心是next数组的构建.
+next数组的构建方法如下：
+def get_next(str):
+    
