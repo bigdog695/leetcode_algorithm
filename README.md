@@ -1,1 +1,1 @@
-﻿# Screw u,Mr Li!
+﻿# God damn Old Lin!
